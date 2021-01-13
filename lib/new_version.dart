@@ -193,7 +193,7 @@ class NewVersion {
   /// Launches the Apple App Store or Google Play Store page for the app.
   void _launchAppStore(String appStoreLink) async {
     if (await canLaunch(appStoreLink)) {
-      await launch(appStoreLink, forceWebView: true);
+      await launch(appStoreLink, forceWebView: false);
     } else {
       throw 'Could not launch appStoreLink';
     }
